@@ -1,5 +1,5 @@
 Authentication::Application.routes.draw do
-  #resources :sessions, :only => [:new]
+  resources :sessions, :only => [:show]
   get "/auth/:provider/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
   # The priority is based upon order of creation: first created -> highest priority.

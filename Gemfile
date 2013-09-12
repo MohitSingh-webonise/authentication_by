@@ -3,6 +3,13 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 gem 'omniauth-twitter'
+gem 'twitter'
+gem 'omniauth-facebook'
+gem 'fb_graph'
+gem "therubyracer"
+gem "less-rails" 
+gem 'twitter-bootstrap-rails'
+# gem 'oauth2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 

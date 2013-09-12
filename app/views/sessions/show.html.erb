@@ -1,0 +1,25 @@
+<div>
+	<table>
+		<thead>
+			<tr>
+				<td align="center">TWEETS</td>
+			</tr>
+		</thead>
+		<tbody>
+		<% @timeline.each do |tweet| %>
+			<tr>
+				<td> <%#= tweet.user.screen_name %> </td>
+				<td> <%= tweet.text %> </td>
+			</tr>
+		<%end%>
+		<tr>
+			<td align="center">POSTS</td>
+		</tr>
+		<% @user.each do |post| %>
+			<tr>
+				<td> <%= post.message %> </td>
+			</tr>
+		<%end%>
+		</tbody>
+	</table>
+</div>
