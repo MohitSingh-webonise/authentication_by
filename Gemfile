@@ -11,8 +11,14 @@ gem "less-rails"
 gem 'twitter-bootstrap-rails'
 # gem 'oauth2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
 
+
+group :development, :test do
+  gem 'sqlite3', '1.3.7'
+   # gem 'mysql2'
+  gem 'rspec-rails', '2.13.1'
+end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
