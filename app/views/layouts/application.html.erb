@@ -11,23 +11,24 @@
     <%= yield(:head) %>
   </head>
   <body>
-    <div id="container">
-      <div id="user_nav">
-      <%#= current_user.inspect %>
-        <% if current_user %>
-          Welcome <%= current_user.name %>!
-          <%= link_to "Sign Out", signout_path %>
-        <% else %>
-          <%= link_to "Sign in with Twitter", "/auth/twitter" %><br/>
-          <%= link_to "Sign in with Facebook", "/auth/facebook" %>
-        <% end %>
+  <%= render 'layouts/header' %>
+    <div class="container">
+      <div id="user_nav" class="center">
+        <%# if current_user %>
+           <%#= current_user.name %>
+          <%#= link_to "Sign Out", signout_path %>
+        <%#else %>
+          <%#= link_to "Sign in with Twitter", "/auth/twitter" %>
+          <%#= link_to "Sign in with Facebook", "/auth/facebook" %>
+        <%# end %>
       </div>
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
+      <%# flash.each do |name, msg| %>
+        <%#= content_tag :div, msg, :id => "flash_#{name}" %>
+      <%# end %>
       <%#= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
     </div>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
 

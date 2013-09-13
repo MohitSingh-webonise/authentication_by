@@ -4,11 +4,13 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 gem 'omniauth-twitter'
 gem 'twitter'
-gem 'omniauth-facebook'
+# gem 'omniauth'
+gem 'omniauth-facebook'#, '~> 1.4.0'
 gem 'fb_graph'
-gem "therubyracer"
-gem "less-rails" 
-gem 'twitter-bootstrap-rails'
+gem 'bootstrap-sass', '2.3.2.0'
+# gem "therubyracer"
+# gem "less-rails" 
+# gem 'twitter-bootstrap-rails'
 # gem 'oauth2'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'

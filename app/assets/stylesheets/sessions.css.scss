@@ -1,3 +1,143 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+
+$grayMediumLight: #eaeaea;
+
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+.right{
+  text-align: right;
+}
+
+.left1{
+  text-align: left;
+}
+
+.left{
+  text-align: left;
+  position: relative;
+  width: 400px;
+  left: 300px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.9em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: white;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/*------data display----------*/
+
+.well{
+  position: relative;
+  width: 400px;
+  left: 300px;
+}
+
+
+/*--Header---*/
+
+.navbar-inner{
+  height: 60px;  
+}
+
+.navbar-inverse{
+  position:fixed;
+  width: 100%;
+  top: 0px;
+}
+
+.app_pos{  
+  position: relative;
+  float: left;
+  top: 8px;
+  left: -18px;
+  width: 200px;
+}
+
+.link_pos{
+  position: relative;
+  float: right;
+  left: 1500px;
+  top: 8px;
+}
+
+.navbar .nav{
+position: relative;
+left: 0;
+display: block;
+float: right;
+margin: 0 10px 0 0;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  a {
+    color: $gray;
+    &:hover {
+      color: $grayDarker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}

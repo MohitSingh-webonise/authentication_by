@@ -10,3 +10,7 @@ Twitter.configure do |config|
   config.oauth_token = '200599584-uf0JE2m9CJC2Tuo2hXeGLuraDxR2Ffj5Zwxx1v77'
   config.oauth_token_secret = 'hYciqV99R7ryPYteQ3VtNyA66o7DXtYYidrEtMj3wc'
   end
+
+  OmniAuth.config.on_failure = Proc.new do |env|
+    SessionsController.action(:omniauth_failure).call(env)
+  end

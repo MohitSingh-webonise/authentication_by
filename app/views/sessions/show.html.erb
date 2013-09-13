@@ -1,25 +1,47 @@
-<div>
-	<table>
-		<thead>
-			<tr>
-				<td align="center">TWEETS</td>
-			</tr>
-		</thead>
-		<tbody>
+<div class="dive_pos">
+	<% if current_user %>
+		<h4> <%= current_user.name.capitalize! %> </h4>
+	<%end%>
+	<% if !@timeline.blank? %>
+		<div class="left">
+				<solid class="text-info"> Tweets </solid>			
+		</div>
 		<% @timeline.each do |tweet| %>
-			<tr>
-				<td> <%#= tweet.user.screen_name %> </td>
-				<td> <%= tweet.text %> </td>
-			</tr>
+			<div class="well center">
+				<h3> <%= tweet.text %> </h3>
+					<solid class="text-info left1"> Interaction </solid><br/>
+						Favorite: <%= tweet.favorited %> (<%= tweet.favourites_count %>)<br/>
+						Retweete: <%= tweet.retweeted %> (<%= tweet.retweet_count %>)
+			</div>
 		<%end%>
-		<tr>
-			<td align="center">POSTS</td>
-		</tr>
-		<% @user.each do |post| %>
-			<tr>
-				<td> <%= post.message %> </td>
-			</tr>
+
+		<%else%>
+
+			<div class="left">
+				<solid class="text-info"> Posts </solid>
+			</div>
+			<% @user.each do |post| %>
+				<div class="well center">
+					<%= post.message %>
+				</div>
+			<%end%>
+
+	<% end %>
+
+		<% if !@home.blank? %>
+			<div class="left">
+				<solid class="text-info"> Follows </solid>
+			</div>
+				</div>
+			<% @home.each do |tweet| %>
+				<div class="well center">
+					<%= tweet.text %>
+					<solid class="text-info left1"> Interaction </solid><br/>
+						Favorite: <%= tweet.favorited %> (<%= tweet.favourites_count %>)<br/>
+						Retweete: <%= tweet.retweeted %> (<%= tweet.retweet_count %>)
+			</div>
+			<%end%>
 		<%end%>
-		</tbody>
-	</table>
+
 </div>
+			<!-- 	<td> <%#= tweet.user.screen_name %> </td> -->
